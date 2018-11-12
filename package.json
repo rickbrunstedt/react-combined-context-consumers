@@ -1,0 +1,16 @@
+{
+  "name": "react-combined-context-consumers",
+  "version": "0.0.1",
+  "description": "Combine consumers for react context api",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {},
+  "keywords": [
+    "react",
+    "context",
+    "consumer",
+    "state"
+  ],
+  "author": "",
+  "license": "MIT"
+}
