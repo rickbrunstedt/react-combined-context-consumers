@@ -1,43 +1,27 @@
 import React, { Component } from 'react';
 
 class CombinedConsumers extends Component {
-  renderConsumer(Consumer, consumerIndex, combinedContext) {
-    consumerIndex++;
-    const isLastConsumer = this.props.consumers.length <= consumerIndex;
-
-    if (isLastConsumer) {
-      return (
-        <Consumer>
-          {context => {
-            combinedContext.push(context);
-
-            return this.props.children(combinedContext);
-          }}
-        </Consumer>
-      );
-    }
+  renderConsumer(consumers, context) {
+    const Consumer = consumers[0];
 
     return (
       <Consumer>
-        {context => {
-          combinedContext.push(context);
+        {anotherContext => {
+          const restOfConsumers = consumers.slice(1);
+          const groupedContext = [...context, anotherContext];
 
-          return this.renderConsumer(
-            this.props.consumers[consumerIndex],
-            consumerIndex,
-            combinedContext
-          );
+          if (restOfConsumers.length > 0) {
+            return this.renderConsumer(restOfConsumers, groupedContext);
+          } else {
+            return this.props.children(...groupedContext);
+          }
         }}
       </Consumer>
     );
   }
 
   render() {
-    let combinedContext = [];
-    let consumerIndex = 0;
-    let consumer = this.props.consumers[consumerIndex];
-
-    return this.renderConsumer(consumer, consumerIndex, combinedContext);
+    return this.renderConsumer(this.props.consumers, []);
   }
 }
 
