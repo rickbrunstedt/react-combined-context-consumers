@@ -2,15 +2,45 @@
   "name": "react-combined-context-consumers",
   "version": "0.0.1",
   "description": "Combine consumers for react context api",
-  "main": "index.js",
-  "module": "index.js",
-  "scripts": {},
+  "author": "Rick Brunstedt <rbrunstedt@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "rollup -c",
+    "format": "prettier --write **/*.{js,json,md}",
+    "example": "parcel examples/index.html"
+  },
   "keywords": [
     "react",
     "context",
+    "context helpers",
     "consumer",
     "state"
   ],
-  "author": "",
-  "license": "MIT"
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "lint-staged": "^8.1.3",
+    "parcel-bundler": "^1.11.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2"
+  }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CombinedConsumers extends Component {
+export class CombinedConsumers extends Component {
   renderConsumer(consumers, context) {
     const Consumer = consumers[0];
 
@@ -24,5 +24,3 @@ class CombinedConsumers extends Component {
     return this.renderConsumer(this.props.consumers, []);
   }
 }
-
-export default CombinedConsumers;
