@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class CombinedConsumers extends Component {
+export default class CombinedConsumers extends Component {
   renderConsumer(consumers, context) {
     const Consumer = consumers[0];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import CombinedConsumers from './CombinedConsumers';
 
-export function applyConsumerProps(Component, consumers, propsToPass) {
+export default function applyConsumerProps(Component, consumers, propsToPass) {
   return () => {
     return (
       <CombinedConsumers consumers={consumers}>

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { CounterContext, CounterStore } from './CounterStore';
-// import applyConsumerProps from '../src/applyConsumerProps';
-import { applyConsumerProps } from '../src/index';
-
-console.log(applyConsumerProps);
+import { applyConsumerProps } from '../lib/index.es';
 
 class SomeComponentDeepDown extends Component {
   render() {
