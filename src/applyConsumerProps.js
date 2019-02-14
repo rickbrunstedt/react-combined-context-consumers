@@ -5,7 +5,7 @@ export default function applyConsumerProps(Component, consumers, propsToPass) {
   return () => {
     return (
       <CombinedConsumers consumers={consumers}>
-        {(...props) => {
+        {props => {
           let propsToUse = props;
 
           if (propsToPass) {

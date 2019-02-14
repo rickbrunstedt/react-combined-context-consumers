@@ -13,7 +13,7 @@ export default class CombinedConsumers extends Component {
           if (restOfConsumers.length > 0) {
             return this.renderConsumer(restOfConsumers, groupedContext);
           } else {
-            return this.props.children(...groupedContext);
+            return this.props.children(groupedContext);
           }
         }}
       </Consumer>
