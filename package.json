@@ -13,7 +13,8 @@
     "clean": "rm -rf lib",
     "build": "rollup -c",
     "format": "prettier --write **/*.{js,json,md}",
-    "example": "parcel examples/index.html"
+    "example": "parcel examples/index.html",
+    "test": "jest"
   },
   "keywords": [
     "react",
@@ -36,10 +37,12 @@
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "jest": "^24.1.0",
     "lint-staged": "^8.1.3",
     "parcel-bundler": "^1.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-test-renderer": "^16.8.2",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2"
   }
