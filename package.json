@@ -5,7 +5,7 @@
   "author": "Rick Brunstedt <rbrunstedt@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
-  "module": "lib/index.es.js",
+  "module": "lib/index.mjs",
   "files": [
     "lib"
   ],
